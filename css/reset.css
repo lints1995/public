@@ -5,7 +5,7 @@
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
-  font: .12rem/.24rem Microsoft YaHei,SimSun,Arial;
+  font-family: Microsoft YaHei, SimSun, Arial;
 }
 
 [v-cloak] {
@@ -120,5 +120,3 @@ button {
   visibility: hidden;
   height: 0;
 }
-
-
