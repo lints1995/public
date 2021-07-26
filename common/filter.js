@@ -1,10 +1,10 @@
 /**
  * 过滤器
  **/
-import Utils from "./utils";
+import { dateFormat as DF } from "@/plugins/day";
 
 function dateFormat(val, format = "YYYY-MM-DD hh:mm:ss") {
-  return Utils.dateFormat(val, format);
+  return DF(val, format);
 }
 export default {
   dateFormat,

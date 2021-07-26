@@ -1,25 +1,23 @@
 /*
  * author: lints
  * date: 2018-06-28
- * description: 根据设备宽度动态设置根节点字体大小比列
+ * description: 动态计算rem单位
  * */
 
-(function (document, window) {
-  let rootHtml = document.documentElement; // 获取节点树的根html
-  let designWidth = 828; // 设计图宽度
-  let remRootSize = 100; // 根元素计算rem基准大小 100px = 1rem
-  let resizeEvent =
+(function(doc, win) {
+  let docEl = doc.documentElement;
+  let resizeEvt =
     "orientationchange" in window ? "orientationchange" : "resize";
-  let setRootFontSize = function () {
-    let clientWidth = rootHtml.clientWidth;
+  let recalc = function() {
+    let clientWidth = docEl.clientWidth;
     if (!clientWidth) return;
-    if (clientWidth >= designWidth) {
-      rootHtml.style.fontSize = `${remRootSize}px`;
+    if (clientWidth >= 828) {
+      docEl.style.fontSize = "200px";
     } else {
-      rootHtml.style.fontSize = `${12 * (clientWidth / designWidth)}px`;
+      docEl.style.fontSize = 200 * (clientWidth / 828) + "px";
     }
   };
-  if (!document.addEventListener) return;
-  window.addEventListener(resizeEvent, setRootFontSize, false);
-  document.addEventListener("DOMContentLoaded", setRootFontSize, false);
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener("DOMContentLoaded", recalc, false);
 })(document, window);

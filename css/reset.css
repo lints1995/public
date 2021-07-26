@@ -1,3 +1,8 @@
+/**
+* Eric Meyer"s Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+* http://cssreset.com
+*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +10,7 @@
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
-  font-family: Microsoft YaHei, SimSun, Arial;
+  font: 0.12rem/0.24rem Microsoft YaHei, SimSun, Arial;
 }
 
 [v-cloak] {
