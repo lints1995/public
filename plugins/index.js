@@ -1,4 +1,5 @@
 /**
  * 第三方插件配置入口
  */
-import "./vant";
+ import "./vant";
+ import "./day";

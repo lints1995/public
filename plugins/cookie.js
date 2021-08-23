@@ -1,13 +1,13 @@
 import Cookies from "js-cookie";
 import { COOKIE_EXPIRES } from "./const";
 
-export const getCookie = function(key) {
+export const getCookie = function (key) {
   /**
    * 获取cookie
    */
   return Cookies.get(key) ? JSON.parse(Cookies.get(key)) : null;
 };
-export const setCookie = function(key, value, expires = COOKIE_EXPIRES) {
+export const setCookie = function (key, value, expires = COOKIE_EXPIRES) {
   /**
    * 设置cookie
    */
@@ -15,7 +15,7 @@ export const setCookie = function(key, value, expires = COOKIE_EXPIRES) {
     expires,
   });
 };
-export const removeCookie = function(key) {
+export const removeCookie = function (key) {
   /**
    * 删除cookie
    * */

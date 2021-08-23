@@ -33,4 +33,5 @@ const Validate = {
     return /^[\u4E00-\u9FA5\uf900-\ufa2d]{2,20}$/.test(value);
   },
 };
+
 export default Validate;

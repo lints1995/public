@@ -76,7 +76,7 @@ const patch = (url, data = {}) => {
 
 // 请求拦截器
 axios.interceptors.request.use(
-  function(config) {
+  function (config) {
     if (!config.data.includes("UNWANTED_TOKEN")) {
       config.headers["token"] = getCookie("_U") ? getCookie("_U").token : "";
     }
